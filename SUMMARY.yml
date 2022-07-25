@@ -1,0 +1,12 @@
+sections:
+  - section: "Getting started"
+    docs:
+      - README.md
+      - getting-started/README.md      
+      - getting-started/ruby-install.md
+
+  - section: "功能介绍"
+    docs:
+      - crud.md
+      - theme-feature.md
+      - site-settings-feature.md
