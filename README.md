@@ -1,12 +1,14 @@
 # Overview
 
+注：文档正在完善中。
+
 RailsBlocks 是一个面向开发者友好的 Ruby on Rails 起步框架，使得你不用每次有一个想法时，`rails new` 来一次又一次的写一些基础的重复代码。
 
 ## 基础扩展
 
-* [CRUD 代码生成](/docs/crud.md)
-* [主题功能](/docs/theme-feature.md)
-* [站点配置功能](/docs/site-settings-feature.md)
+* [CRUD 代码生成](crud.md)
+* [主题功能](theme-feature.md)
+* [站点配置功能](site-settings-feature.md)
 
 ## 功能模板
 
