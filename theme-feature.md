@@ -44,4 +44,5 @@ my-app
 
 ## 资源文件 Assets
 
-图片文件放于
+* 图片文件放于 assets/images/ 中
+* builds 目录是终的可以引用的文件
