@@ -4,19 +4,21 @@
 
 In `config/environment/[env].rb`
 
-    config.action_mailer.raise_delivery_errors = false
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.perform_deliveries = true
-    config.action_mailer.perform_caching = false
+```ruby
+config.action_mailer.raise_delivery_errors = false
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = true
+config.action_mailer.perform_caching = false
 
-    config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
-      :port                 => 587,
-      :user_name            => "xxxxxxx@gmail.com",
-      :password             => "app password, not gmail password"
-      :authentication       => "plain",
-      :enable_starttls_auto => true
-    }
+config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :user_name            => "xxxxxxx@gmail.com",
+    :password             => "app password, not gmail password"
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+}
+```    
 
 ## Postmark example
 
@@ -44,21 +46,25 @@ Then set Postmark as your preferred mail delivery method via config/application.
 
 6. Set up your mailer:
 
-    class TestMailer < ApplicationMailer
-        default from: 'service@canslim.org'
+```ruby
+class TestMailer < ApplicationMailer
+    default from: 'service@canslim.org'
 
-        def hello
-            mail(
-            subject: 'Hello from Postmark',
-            to: 'example@gmail.com',
-            from: 'service@canslim.org',
-            html_body: '<strong>Hello</strong> dear Postmark user.',
-            track_opens: 'true',
-            message_stream: 'outbound')
-        end
+    def hello
+        mail(
+        subject: 'Hello from Postmark',
+        to: 'example@example.com',
+        from: 'service@example.org',
+        html_body: '<strong>Hello</strong> dear Postmark user.',
+        track_opens: 'true',
+        message_stream: 'outbound')
     end
+end
+```
 
 7. Send an email from the console by calling deliver_now. Alternatively, you can call deliver_later to send the email asynchronously.
 
-    $ bin/rails console
-    >> TestMailer.hello.deliver_now
+```
+$ bin/rails console
+>> TestMailer.hello.deliver_now
+```    

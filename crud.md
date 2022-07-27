@@ -1,6 +1,8 @@
 # CRUD 代码生成
 
-如何快速创建一个后台的增删节查改（CRUD）的包括控制器、模型、视图页面的全套代码？在 Rails 中一般是用如下的命令来生成：
+如何快速创建一个后台的增删节查改（CRUD）的包括控制器、模型、视图页面的全套代码？
+
+在 Rails 中一般是用如下的命令来生成：
 
 ```
 $ ./bin/rails generate scaffold HighScore game:string score:integer

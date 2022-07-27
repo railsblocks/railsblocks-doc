@@ -1,6 +1,6 @@
 # Get started
 
-RailsBlocks 是一个面向开发者友好的 Ruby on Rails 起步框架，使得你不用每次有一个想法时，`rails new` 来一次又一次的写一些基础的重复代码。
+RailsBlocks 是一个对开发者友好的 Ruby on Rails 起步框架，使得你不用每次有一个想法时，`rails new` 来一次又一次的写一些基础的重复代码。
 
 ## Quick start
 

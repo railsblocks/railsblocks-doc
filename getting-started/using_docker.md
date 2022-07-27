@@ -12,4 +12,4 @@
 
 ## Development
 
-    docker build -t sitebuilder-web .
+    docker build -t railsblock-web .

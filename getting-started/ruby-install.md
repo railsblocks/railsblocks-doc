@@ -6,17 +6,19 @@ Ruby 可以安装在 Linux / Mac / Windows 操作系统中。在这里不推荐�
 
 首先从 Ruby 语言的官方网站上下载源代码，然后在目标机器上编辑安装。
 
-    wget https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.1.1.tar.gz
-    tar -xf ruby-3.1.1.tar.gz
-    cd ruby-3.1.1
-    ./configure --prefix=/usr/local/ruby-3.1.1 --disable-install-doc
-    make
-    sudo make install
-    # Add '/usr/local/ruby-3.1.1/bin' to $PATH and safe path
-    # sudo vim /etc/environment
-    # sudo visudo
-    source /etc/environment
-    ruby -v
+```
+wget https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.1.1.tar.gz
+tar -xf ruby-3.1.1.tar.gz
+cd ruby-3.1.1
+./configure --prefix=/usr/local/ruby-3.1.1 --disable-install-doc
+make
+sudo make install
+# Add '/usr/local/ruby-3.1.1/bin' to $PATH and safe path
+# sudo vim /etc/environment
+# sudo visudo
+source /etc/environment
+ruby -v
+```    
 
 ## rbenv
 
