@@ -32,9 +32,9 @@ class Site < ApplicationRecord
       where(selected: true).first # Site.where
     end
   end
-  
+
 end
 
 ```
 
-![site_settings_01.png](images/site_settings_01.png)
+![site_settings_01.png](images/site_settings_01.gif)
