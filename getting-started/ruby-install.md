@@ -4,6 +4,13 @@ Ruby 可以安装在 Linux / Mac / Windows 操作系统中。在这里不推荐�
 
 ## 源代码安装
 
+```
+sudo apt-get install -y libssl-dev
+sudo apt-get install libyaml-dev
+sudo apt-get install zlib1g-dev
+```
+
+
 首先从 Ruby 语言的官方网站上下载源代码，然后在目标机器上编辑安装。
 
 ```
@@ -22,9 +29,18 @@ ruby -v
 
 ## rbenv
 
-https://github.com/rbenv/rbenv
+Install 
 
+https://github.com/rbenv/rbenv
 https://github.com/rbenv/ruby-build
+
+```
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+rbenv install 3.2.2
+rbenv global 3.2.2
+```
 
 ## Docker
 

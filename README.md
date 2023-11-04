@@ -1,29 +1,29 @@
 # Overview
 
-注：文档正在完善中。
+Note: The document is being improved.
 
-RailsBlocks 是一个面向开发者友好的 Ruby on Rails 起步框架，使得你不用每次有一个想法时，`rails new` 来一次又一次的写一些基础的重复代码。
+RailsBlocks is a developer-friendly Ruby on Rails startup framework, so that you don't have to `rails new` every time you have an idea, and write some basic repetitive code over and over again.
 
-## 基础扩展
+## Provided Basic Functionality
 
-* [CRUD 代码生成](crud.md)
-* [主题功能](theme-feature.md)
-* [站点配置功能](site-settings-feature.md)
+* [Backend CRUD Code Generation](crud.md)
+* [Multi-theme Functionality](theme-feature.md)
+* [Site Configuration Functionality](site-settings-feature.md)
 
-## 功能模板
+## Function Modules
 
-### 文章模块
+### Article Module
 
-文章分类、文章列表、文章内容、文章评论
+Article categories, article list, article content manage, article comments
 
-### 产品模块
+### Product Module
 
-产品分类、产品图片、产品信息，方便后期二次开发
+Product categories, product images, product content management, convenient for later secondary development
 
-## 表单管理
+## Form Management
 
-表单配置、表单展现、表单数据收集
+Form configuration, form render, form data collection
 
-### 文件模块
+### File Moudle
 
-文件上传、文件下载、文件链接分享
+File Upload, file download, file Link Sharing
