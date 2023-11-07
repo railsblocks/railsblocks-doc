@@ -5,7 +5,7 @@ sections:
       - getting-started/README.md      
       - getting-started/ruby-install.md
 
-  - section: "功能介绍"
+  - section: "Features"
     docs:
       - crud.md
       - theme-feature.md

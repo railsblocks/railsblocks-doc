@@ -1,22 +1,22 @@
-# 主题功能
+# Multi-theme Functionality
 
-为了减少开发工作量，提高项目复用度，本项目支持了多主题功能。准确地说，应该是前台多主题，后台还是同一套管理代码。
+In order to reduce development workload and improve project reusability, this project supports multi-theme functionality. To be precise, it should be multiple themes in the front-end, while the back-end still uses the same set of management code.
 
-通过这样的方式，你可以方便地开发出各种类型的 WEB 应用，满足不同类型的需求。通过多主题功能，你可以开发一个产品起步站 (Landing page)、博客网站 (Blog)、资讯网站 (News)、公司网站 (Compnay)、外贸网站、电商网站 (Ecommerce) 等等。
+In this way, you can conveniently develop various types of WEB applications to meet different types of needs. Through the multi-theme function, you can develop a product landing page, blog site, news site, company site, foreign trade site, e-commerce site, and so on.
 
-## 起步
+## Get started
 
-主题代码位于 `app/themes` 目录中。通过命令 
+The theme code is located in the **app/themes** directory. Run the following command:
 
 ```
 $ ./bin/rails g theme YourThemeName
 ```
 
-可以快速生成一个默认的主题，然后你根据实际需求，开始你的创造吧。
+You can quickly generate a default theme, and then start your creation based on actual needs.
 
-### 主题组成
+### Theme Composition Structure
 
-一个主题是由若干页面（html.erb）、js、css 和图片等静态资源文件，还有多语言翻译文件组成。
+A theme is composed of several pages (html.erb), js, css and other static resource files, as well as I18N translation files.
 
 ```
 my-app
@@ -40,13 +40,14 @@ my-app
                     └── index.html.erb
 ```
 
-主题中的页面开发和你所熟悉的 app/views 目录中的开发没有两样，遵循同样的 Rails 约定，同样的 ERB 模板语言。只不过是为了区分多个主题，在 app/themes 目录中分开了。
 
-## 资源文件 Assets
+The composition of the pages in the theme is no different from what you are familiar with in the **app/views** directory, following the same Rails conventions and the same ERB template language. It's just that in order to distinguish multiple themes, they are separated in the app/themes directory.
 
-* 图片文件放于 assets/images/ 中
-* builds 目录是终的可以引用的文件
+## Resource Assets
 
-对于简单的不需要打包的 JS 文件，你可以直接放在 builds 目录中，然后在页面中使用正常的 `javascript_include_tag` 方法来引用 JS。
+* Image files are placed in the **assets/images/** directory.
+* The **builds** directory is the final file that can be referenced.
 
-如果你使用了前端工程化的 JS，需要打包等流程，你可以使用你熟悉的工具来完成，将最终的输出文件放在 builds 目录中。
+For simple Javascript files that do not need to be packaged, you can directly put them in the **builds** directory, and then use the normal `javascript_include_tag` method to reference JS in the page.
+
+If you are using front-end engineered Javascript and need to go through processes like packaging, you can use the tools you are familiar with to complete it, and put the final output files in the **builds** directory.

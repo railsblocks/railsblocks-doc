@@ -1,12 +1,12 @@
 # Get started
 
-RailsBlocks 是一个对开发者友好的 Ruby on Rails 起步框架，使得你不用每次有一个想法时，`rails new` 来一次又一次的写一些基础的重复代码。
+RailsBlocks is a developer-friendly Ruby on Rails starter framework, so that you don't have to `rails new` and write some basic repetitive code over and over again every time you have an idea.
 
 ## Quick start
 
 ### Environment dependency
 
-- Ruby 3.1.1
+- Ruby 3.2.2
 - NodeJS 16.x with yarn 1.x installed
 - Postgresql 14.x
 

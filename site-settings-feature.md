@@ -1,6 +1,6 @@
-# 站点配置功能
+# Site Settings Feature
 
-站本配置采用动态表单，在模型中定义好配置项，表单页面自动展现，下面是实际的例子。
+The site configuration uses a dynamic form. The configuration items are defined in the model, and the form page is automatically displayed. Below is an actual example.
 
 ```ruby
 class Site < ApplicationRecord
