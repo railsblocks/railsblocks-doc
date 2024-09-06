@@ -1,53 +1,83 @@
-# Multi-theme Functionality
 
-In order to reduce development workload and improve project reusability, this project supports multi-theme functionality. To be precise, it should be multiple themes in the front-end, while the back-end still uses the same set of management code.
-
-In this way, you can conveniently develop various types of WEB applications to meet different types of needs. Through the multi-theme function, you can develop a product landing page, blog site, news site, company site, foreign trade site, e-commerce site, and so on.
-
-## Get started
-
-The theme code is located in the **app/themes** directory. Run the following command:
+## 主题文件结构
 
 ```
-$ ./bin/rails g theme YourThemeName
+theme/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── layout/
+│   ├── theme.liquid
+│   └── other-layouts.liquid
+├── snippets/
+│   ├── header.liquid
+│   ├── footer.liquid
+│   └── product-card.liquid
+├── templates/
+│   ├── index.liquid
+│   ├── product.liquid
+│   ├── page.liquid
+│   ├── post.liquid
+│   └── collection.liquid
+└── config/
+    └── settings_schema.json
 ```
 
-You can quickly generate a default theme, and then start your creation based on actual needs.
+### 目录说明
 
-### Theme Composition Structure
+- assets/: 存放CSS、JavaScript和图片等静态资源
+- layout/: 包含主布局文件和其他布局模板
+- sections/: 可重用的页面部分,如页眉、页脚等
+- snippets/: 可在多个模板中重用的代码片段
+- templates/: 各种页面类型的模板文件
+- config/: 主题配置文件,如settings_schema.json
 
-A theme is composed of several pages (html.erb), js, css and other static resource files, as well as I18N translation files.
+## 常用Liquid语法
+
+### 对象
+
+{{ product.title }}
+{{ collection.products }}
+{{ cart.total_price }}
+
+### 标签
+
+条件语句:
+{% if product.available %}
+  In stock
+{% else %}
+  Sold out
+{% endif %}
+
+循环:
+
+{% for product in collection.products %}
+  {{ product.title }}
+{% endfor %}
+
+过滤器
+
+{{ product.title | upcase }}
+{{ product.price | money_with_currency }}
+
+注释
+
+{% comment %}
+  这是一段注释
+{% endcomment %}
+
+包含其他模板
+
+{% render 'product-card' %}
+
+分页
 
 ```
-my-app
-└── app
-    ├── views
-    └── themes
-        └── your-theme
-            ├── README.md
-            ├── assets
-            │   ├── builds
-            │   ├── images
-            │   └── stylesheets
-            ├── locales
-            │   ├── en.yml
-            │   └── zh-CN.yml
-            └── views
-                ├── layouts
-                │   ├── application.html.erb
-                │   └── _header.html.erb
-                └── home
-                    └── index.html.erb
+{% paginate collection.products by 12 %}
+  {% for product in collection.products %}
+    <!-- 产品展示代码 -->
+  {% endfor %}
+  {{ paginate | default_pagination }}
+{% endpaginate %}
 ```
-
-
-The composition of the pages in the theme is no different from what you are familiar with in the **app/views** directory, following the same Rails conventions and the same ERB template language. It's just that in order to distinguish multiple themes, they are separated in the app/themes directory.
-
-## Resource Assets
-
-* Image files are placed in the **assets/images/** directory.
-* The **builds** directory is the final file that can be referenced.
-
-For simple Javascript files that do not need to be packaged, you can directly put them in the **builds** directory, and then use the normal `javascript_include_tag` method to reference JS in the page.
-
-If you are using front-end engineered Javascript and need to go through processes like packaging, you can use the tools you are familiar with to complete it, and put the final output files in the **builds** directory.
