@@ -2,8 +2,7 @@ sections:
   - section: "Getting started"
     docs:
       - README.md
-      - getting-started/README.md      
-      - getting-started/ruby-install.md
+      - getting-started/README.md
 
   - section: "Features"
     docs:
