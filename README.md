@@ -2,9 +2,9 @@
 
 Note: The document is being improved.
 
-RailsBlocks is a developer-friendly Ruby on Rails startup framework, so that you don't have to `rails new` every time you have an idea, and write some basic repetitive code over and over again.
+RailsBlocks is a website creation tool with multi-theme support, aimed at enhancing developer experience.
 
-## Provided Basic Functionality
+## Features
 
 * [Backend CRUD Code Generation](crud.md)
 * [Multi-theme Functionality](theme-feature.md)
