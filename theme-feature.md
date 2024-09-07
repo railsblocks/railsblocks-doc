@@ -1,3 +1,4 @@
+# Theme deveopment API
 
 ## 主题文件结构
 
@@ -33,9 +34,43 @@ theme/
 - templates/: 各种页面类型的模板文件
 - config/: 主题配置文件,如settings_schema.json
 
-## 常用Liquid语法
+## 常用代码片断
+
+网页标题标签：
+
+```
+<title>{% if page_title != blank %}{{ page_title }} - {% endif %}{{ site.name }}</title>
+```
+
+显示网站导航链接：
+
+```
+{% render_menu "Main Menu" -%}
+  <div class="flex items-center">
+    {% for item in menu_items -%}
+      <a class="py-2 text-blue-600 hover:underline" href="{{ item.url }}">{{ item.display_name }}</a>
+    {% endfor -%}
+  </div>
+{% endrender_menu -%}
+```
+
+多个链接组成菜单，可以在菜单管理中进行设置。
+
+显示文章分类的子分类列表:
+
+例如：显示'blog'分类的所有子分类：
+
+```
+{% for category in blogs.blog.categories %}
+  <li><a class="py-2 text-sm hover:underline" href="{{ category.url }}">{{ category.name }}</a></li>
+{% endfor %}
+```
+
+
+## 常用 Liquid 语法
 
 ### 对象
+
 
 {{ product.title }}
 {{ collection.products }}
