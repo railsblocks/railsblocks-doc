@@ -42,6 +42,26 @@ theme/
 <title>{% if page_title != blank %}{{ page_title }} - {% endif %}{{ site.name }}</title>
 ```
 
+静态资源文件引用：
+
+静态资源文件一般包括Javascript文件、CSS样式文件、图片文件等，它们都应该放到主题的 assets 目录中，也可以放到 assets 目录中的子目录中。
+
+例如引用当前主题中的 application.css
+```
+{{ 'application.css' | asset_url | stylesheet_tag }}
+```
+
+引用当前主题中的 app.js 文件
+```
+<script src="{{ 'app.js' | asset_url }}" defer></script>
+```
+
+引用当前主题中的图片文件:
+```
+<img src="{{ 'logo.png' | asset_url }}" alt="Logo">
+``` 
+
+
 显示网站导航链接：
 
 ```
