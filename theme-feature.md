@@ -86,6 +86,21 @@ theme/
 {% endfor %}
 ```
 
+显示全站文章分类列表：
+
+```
+<ul class="flex justify-center space-x-4">
+  {% for category in blogs.post_categories %}
+    <li class="">
+      <a href="{{ category.url }}" 
+          class="{% if category.current? %}text-red-700 border-l-red-300{% else %}text-gray-700 hover:text-red-700{% endif %} ">
+        {{ category.name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+```
+
 
 ## 常用 Liquid 语法
 

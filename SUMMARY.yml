@@ -9,3 +9,7 @@ sections:
       - crud.md
       - theme-feature.md
       - site-settings-feature.md
+
+  - section: "Development"
+    docs:
+      - development/packaging.md
