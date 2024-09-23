@@ -4,6 +4,10 @@ sections:
       - README.md
       - getting-started/README.md
 
+  - section: "How To"
+    docs:
+      - how-to/configure-oauth.md
+
   - section: "Features"
     docs:
       - crud.md
